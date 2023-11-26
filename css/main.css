@@ -48,7 +48,7 @@ p {
   left: center;
   transform: translate(-50%, -50%);
 
-  font-family: 'Font';
+  font-family: 'Arial', 'Font';
   font-weight: bold; /* Agregamos esta línea para hacer la fuente negrita */
   font-size:8vw;
 }
@@ -303,7 +303,7 @@ p {
   background-color: #f0f0f0;
 }
 .flower__white-circle::after {
-  content: '';
+  content: '';;
   position: absolute;
   left: 50%;
   top: 45%;
