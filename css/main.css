@@ -41,13 +41,13 @@ p {
 
   /* Centramos vertical y horizontalmente */
   position: absolute;
-  top: 5px;
+  top: 15px;
   left: center;
   transform: translate(-50%, -50%);
 
   font-family: 'Font', 'Arial';
   font-weight: bold; /* Agregamos esta línea para hacer la fuente negrita */
-  font-size:8vw;
+  font-size:5vw;
 }
 
 @-webkit-keyframes bounce {
