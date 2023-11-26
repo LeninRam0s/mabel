@@ -25,6 +25,7 @@ body {
   background-color: var(--dark-color);
   overflow: hidden;
   perspective: 1000px;
+  font-family: 'Font';
 }
 
 .container {
@@ -44,7 +45,7 @@ p {
   left: center;
   transform: translate(-50%, -50%);
 
-  font-family: 'Font', 'Font';
+  font-family: 'Font', 'Arial';
   font-weight: bold; /* Agregamos esta línea para hacer la fuente negrita */
   font-size:6vw;
 }
