@@ -31,10 +31,12 @@ body {
 }
 
 .container {
-    position: relative;
+    
     width: 100%; /* Ancho del contenedor al 100% */
     max-width: 1200px; /* Ancho máximo del contenedor para evitar que se vuelva demasiado ancho en pantallas grandes */
     margin: 0 auto; /* Centramos horizontalmente el contenedor */
+    display: flex;
+    justify-content: space-between;
 }
 
 
@@ -70,7 +72,7 @@ p.active {
 
 /* Estilos base para la imagen */
 img {
-    width: 300px; /* Ancho de la imagen */
+    width: 100%; /* Ancho de la imagen */
     height: auto; /* Altura automática para mantener la proporción original */
     position: absolute;
     top: -70px; /* Margen superior de 20 píxeles */
