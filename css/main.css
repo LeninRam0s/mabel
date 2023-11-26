@@ -44,7 +44,7 @@ p {
 
   /* Centramos vertical y horizontalmente */
   position: absolute;
-  top: 20%;
+  top: 10px;
   left: center;
   transform: translate(-50%, -50%);
 
