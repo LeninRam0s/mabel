@@ -12,7 +12,7 @@
 
 @font-face {
     font-family: 'Font'; /* Puedes darle el nombre que desees */
-    src: url('../css/FancyHeartScript.ttf'); /* Reemplaza con la ruta o URL de tu fuente */
+    src: url('/css/FancyHeartScript.ttf'); /* Reemplaza con la ruta o URL de tu fuente */
     font-weight: normal;
     font-style: normal;
 }
@@ -41,13 +41,13 @@ p {
 
   /* Centramos vertical y horizontalmente */
   position: absolute;
-  top: 2px;
+  top: 5px;
   left: center;
   transform: translate(-50%, -50%);
 
   font-family: 'Font', 'Arial';
   font-weight: bold; /* Agregamos esta línea para hacer la fuente negrita */
-  font-size:6vw;
+  font-size:8vw;
 }
 
 @-webkit-keyframes bounce {
