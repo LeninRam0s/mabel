@@ -29,64 +29,73 @@ body {
 }
 
 .container {
-  position: relative; /* Aseguramos que la posición relativa sea el contenedor para el posicionamiento absoluto */
+    position: relative;
+    width: 100%; /* Ancho del contenedor al 100% */
+    max-width: 1200px; /* Ancho máximo del contenedor para evitar que se vuelva demasiado ancho en pantallas grandes */
+    margin: 0 auto; /* Centramos horizontalmente el contenedor */
 }
+
 
 p {
   color: #a88bfa;
   text-align: center;
   opacity: 0; /* Inicialmente, hacemos que el elemento esté invisible */
-  -webkit-animation: bounce 0s infinite;
-  animation: bounce 2s infinite 5s; /* Agregamos 5 segundos de retraso antes de que comience la animación */
+  transform: scale(0); /* Establecemos la escala inicial a cero para ocultar el elemento */
+  transition: transform 0.5s ease-in-out; /* Agregamos una transición para el efecto de zoom */
+
+  /* Agregamos 5 segundos de retraso antes de que comience la animación */
+  -webkit-animation: none;
+          animation: none;
 
   /* Centramos vertical y horizontalmente */
   position: absolute;
-  top: 5%;
-  left: center;
-  transform: translate(-50%, -50%);
+  top: 15%;
+  left: auto;
+  transform: translateX(-50%); /* Centramos correctamente horizontalmente */
 
   font-family: 'Font', 'Arial';
   font-weight: bold; /* Agregamos esta línea para hacer la fuente negrita */
-  font-size:5vw;
+  font-size: 5vw;
 }
 
-@-webkit-keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-20px);
-  }
-  60% {
-    transform: translateY(-15px);
-  }
-  100% {
-    opacity: 1; /* Al final de la animación, hacemos visible el elemento */
-  }
+/* Aplicamos el efecto de zoom después de 5 segundos */
+p.active {
+  opacity: 1;
+  transform: scale(1);
 }
 
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-20px);
-  }
-  60% {
-    transform: translateY(-15px);
-  }
-  100% {
-    opacity: 1; /* Al final de la animación, hacemos visible el elemento */
-  }
+
+/* Estilos base para la imagen */
+img {
+    width: 300px; /* Ancho de la imagen */
+    height: auto; /* Altura automática para mantener la proporción original */
+    position: absolute;
+    top: -70px; /* Margen superior de 20 píxeles */
+    left: 50%; /* Centramos horizontalmente */
+    transform: translateX(-50%); /* Ajustamos para centrar correctamente */
+    -webkit-animation: zoom 2s infinite; /* Prefijo para Webkit (Chrome, Safari) */
+            animation: zoom 2s infinite; 
 }
+
+/* Media query para pantallas pequeñas (por ejemplo, ancho máximo de 600px) */
+@media screen and (max-width: 600px) {
+    img {
+        width: 80%; /* Ajustar el ancho para pantallas pequeñas */
+        left: 50%; /* Mantener centrado horizontalmente */
+        transform: translateX(-50%); /* Ajustamos para centrar correctamente */
+    }
+}
+
+/* Media query para pantallas medianas (por ejemplo, ancho entre 601px y 900px) */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    img {
+        width: 60%; /* Ajustar el ancho para pantallas medianas */
+        left: 50%; /* Mantener centrado horizontalmente */
+        transform: translateX(-50%); /* Ajustamos para centrar correctamente */
+    }
+}
+
+
 
 .night {
   position: fixed;
@@ -1633,4 +1642,6 @@ p {
 .container * {
   -webkit-animation-play-state: paused !important;
   animation-play-state: paused !important;
+}
+
 }
