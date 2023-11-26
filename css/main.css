@@ -17,8 +17,6 @@
     font-style: normal;
 }
 
-
-
 body {
   display: flex;
   align-items: flex-end;
@@ -27,8 +25,6 @@ body {
   background-color: var(--dark-color);
   overflow: hidden;
   perspective: 1000px;
-  
-  
 }
 
 .container {
@@ -48,9 +44,9 @@ p {
   left: center;
   transform: translate(-50%, -50%);
 
-  font-family: 'Arial', 'Font';
+  font-family: 'Font', 'Font';
   font-weight: bold; /* Agregamos esta línea para hacer la fuente negrita */
-  font-size:8vw;
+  font-size:6vw;
 }
 
 @-webkit-keyframes bounce {
