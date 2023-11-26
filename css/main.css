@@ -26,6 +26,8 @@ body {
   overflow: hidden;
   perspective: 1000px;
   font-family: 'Font';
+  overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal */
+  overflow-y: hidden; /* Oculta la barra de desplazamiento vertical */
 }
 
 .container {
